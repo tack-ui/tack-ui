@@ -1,0 +1,29 @@
+{
+  "name": "tack-ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "is-ci || husky",
+    "preinstall": "npx only-allow pnpm",
+    "changeset": "changeset",
+    "clean": "turbo run clean && rm -rf .turbo node_modules",
+    "build": "turbo run build",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "format": "prettier . --ignore-unknown --write --log-level=error"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.2",
+    "husky": "^9.1.7",
+    "is-ci": "^4.1.0",
+    "lint-staged": "^15.5.1",
+    "oxlint": "^0.16.7",
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.0"
+  },
+  "packageManager": "pnpm@10.9.0",
+  "license": "MIT",
+  "author": "Kris Ellery <kris.ellery@hey.com>",
+  "homepage": "https://www.tack-ui.com"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "clean": {
+      "cache": false,
+      "outputLogs": "errors-only"
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": [],
+      "outputs": ["dist/**", "styled-system/**"],
+      "outputLogs": "errors-only"
+    }
+  }
+}
